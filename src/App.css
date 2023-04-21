@@ -2,12 +2,20 @@ form {
   text-align: center;
 }
 
+button[type="submit"] {
+  background-color: #009264;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  max-width: 100px;
+}
+
 .container {
   display: flex;
   justify-content: space-around;
-  border: 1px solid black;
-  margin: 1rem;
-  padding: 2rem;
+  margin: 1rem 0;
 }
 
 .input-container {
@@ -23,6 +31,9 @@ form {
   border-color: black;
   padding: 1rem;
   min-width: 25rem;
+  background-color: #009264;
+  color: white;
+  text-align: left;
 }
 
 .toggle-icon {
@@ -30,7 +41,6 @@ form {
   right: 1rem;
   top: 0.5rem;
   margin: 0.5rem 0;
-  color: #4CAF50;
   font-size: 2rem;
   cursor: pointer;
   user-select: none;
@@ -45,6 +55,7 @@ form {
   border-style: solid;
   border-color: black;
   width: 100%;
+  background-color: rgb(0, 103, 158);
 }
 
 .sub-form-input-container {
@@ -98,4 +109,29 @@ input[type="file"] {
 .save-btn {
   background-color: #4CAF50;
   color: white;
+}
+
+.data-display {
+  color: white;
+  text-align: left;
+}
+
+/*Mobile*/
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    padding: 0.3rem;
+    margin: 0.5rem;
+  }
+
+  .input-container-body {
+    min-width: 0;
+    padding: 0.5rem;
+    width: 100%;
+  }
+
+  .toggle-icon {
+    font-size: 1.3rem;
+    right: 0.2rem;
+  }
 }

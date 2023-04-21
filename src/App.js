@@ -16,7 +16,7 @@ export const App = () => {
 			<CustomInput type={INPUT_TYPES.FILE} values={fileSubInputs} />
 			<CustomInput type={INPUT_TYPES.DROP_DOWN} values={dropdownSubInputs} />
 			<CustomInput type={INPUT_TYPES.TEXT} values={textSubInputs} />
-			<button className='btn'>Submit</button>
+			<button type='submit' className='btn'>Submit</button>
 		</form>
 	)
 }

@@ -90,7 +90,7 @@ export const CustomInput = ({ type, values }) => {
                                     <input
                                         type='text'
                                         name='name'
-                                        placeholder={`name ${ind + 1}`}
+                                        placeholder={`name ${ind + 1} (required)`}
                                         onChange={(e) => handleFormChange(e, ind)}
                                         value={field.name}
                                     />
@@ -108,15 +108,19 @@ export const CustomInput = ({ type, values }) => {
                                 onClick={() => handleSaveData()}
                             >Save</button>
                         }
+                        <div className='data-display'>
+                            {
+                                values.length != 0 && showData == false && <h3>Click save to see values</h3>
+                            }
+                            {
+                                showData && values.map(({ name }, ind) => <p key={ind} >{ind + 1}: {name}</p>)
+                            }
+                        </div>
                     </div>
                 }
+
             </div>
-            <div className='data-display'>
-                <h3>Click save to see values</h3>
-                {
-                    showData && values.map(({ name }, ind) => <p key={ind} >{ind + 1}: {name}</p>)
-                }
-            </div>
+
         </div>
     )
 }
